@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Launcher client_version="1" remote_path="http://localhost/cruel-launcher">
+    <!-- Maximum 4 or 5 links depends on the link text length -->    
+    <Navbar>
+        <Link text="SUPPORT">http://cruel-wow.com/en/page/faq</Link>
+        <Link text="COMMUNITY">https://www.cruel-wow.com/en/forum</Link>
+        <Link text="ACCOUNT MANAGEMENT">https://www.cruel-wow.com/en/login</Link>
+        <Link text="STORE">https://www.cruel-wow.com/en/store</Link>
+        <Link text="DISCORD">https://www.cruel-wow.com/en/store</Link>
+    </Navbar>
+    
+    <News enable="true">
+        <Image>https://github.com/CyberMist2/MyPublicRepo/blob/master/Layer%2010.png?raw=true</Image>
+        <Article>https://github.com/CyberMist2/MyPublicRepo/raw/master/Article.rtf</Article>
+        <Date>15 August 2020</Date>
+        <ReadMore>https://www.cruel-wow.com/en/news/5</ReadMore>
+    </News>
+    
+    <Changelogs enable="true">
+        <Changelog text="CHANGELOG 1.0">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.9">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.8">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.7">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.6">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.5">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.4">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.3">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.2">http://google.com</Changelog>
+        <Changelog text="CHANGELOG 0.1">http://google.com</Changelog>
+    </Changelogs>
+</Launcher>

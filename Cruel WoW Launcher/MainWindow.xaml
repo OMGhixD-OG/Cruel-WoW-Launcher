@@ -1,0 +1,102 @@
+﻿<Window x:Class="Cruel_WoW_Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Cruel WoW Launcher" Height="597" Width="960" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/BG.png" Stretch="None"/>
+    </Window.Background>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="960" Background="#00000000" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Button x:Name="ExitButton" Content="" HorizontalAlignment="Left" Height="12" Margin="945,3,0,0" VerticalAlignment="Top" Width="12" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyleExit}" Cursor="Hand" Click="ExitButton_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="None" ImageSource="Resources/exit_button_a.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizeButton" Content="" HorizontalAlignment="Left" Height="12" Margin="931,3,0,0" VerticalAlignment="Top" Width="12" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyleMinimize}" Cursor="Hand" Click="MinimizeButton_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="None" ImageSource="Resources/minimize_button_a.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="Navbar" HorizontalAlignment="Left" Height="64" Margin="97,21,0,512" VerticalAlignment="Center" Width="844">
+            <Grid.Background>
+                <ImageBrush Stretch="None" ImageSource="Resources/navbar_bg.png"/>
+            </Grid.Background>
+            <Button Content="SUPPORT" HorizontalAlignment="Left" Margin="78,21,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF8A8383" FontFamily="Arial" FontSize="16" FontWeight="Bold" Style="{DynamicResource ButtonStyleLink}"/>
+            <Button Content="COMMUNITY" HorizontalAlignment="Left" Margin="225,21,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF83858A" FontFamily="Arial" FontSize="16" FontWeight="Bold" Style="{DynamicResource ButtonStyleLink}"/>
+            <Button Content="ACCOUNT MANAGEMENT" HorizontalAlignment="Left" Margin="407,21,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF83858A" FontFamily="Arial" FontSize="16" FontWeight="Bold" Style="{DynamicResource ButtonStyleLink}"/>
+            <Button Content="STORE" HorizontalAlignment="Left" Margin="680,21,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF83858A" FontFamily="Arial" FontSize="16" FontWeight="Bold" Style="{DynamicResource ButtonStyleLink}"/>
+        </Grid>
+        <Button x:Name="SettingsButton" Content="" HorizontalAlignment="Left" Height="64" Margin="23,21,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyleSettings}">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="Resources/settings_button_a.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="CHANGELOG" HorizontalAlignment="Left" Margin="23,126,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FF83858A"/>
+        <Label Content="LATEST NEWS" HorizontalAlignment="Left" Margin="404,126,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FF83858A"/>
+        <Grid x:Name="NewsGrid" HorizontalAlignment="Left" Height="402" Margin="404,173,0,0" VerticalAlignment="Top" Width="537">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/news_box.png" Stretch="None"/>
+            </Grid.Background>
+            <Image x:Name="NewsImage" HorizontalAlignment="Left" Height="164" VerticalAlignment="Top" Width="537"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="185" Margin="0,181,0,0" VerticalAlignment="Top" Width="537" Style="{DynamicResource BlackBGScrollViewer}">
+                <RichTextBox x:Name="NewsArticle" VerticalAlignment="Top" Width="490" Background="{x:Null}" BorderBrush="{x:Null}" IsInactiveSelectionHighlightEnabled="True" IsReadOnly="True" Style="{DynamicResource RichTextBoxStyleArticle}"/>
+            </ScrollViewer>
+            <Label x:Name="NewsDate" Content="" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" Foreground="#FF83858A" VerticalContentAlignment="Center"/>
+            <Button x:Name="BtnReadMore" Content="Read More" HorizontalAlignment="Left" Margin="453,379,0,0" VerticalAlignment="Top" Width="74" FontFamily="Arial" FontWeight="Bold" Foreground="#FF83858A" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyleReadMore}" IsEnabled="False"/>
+        </Grid>
+        <ScrollViewer HorizontalAlignment="Left" Height="249" Margin="23,173,0,0" VerticalAlignment="Top" Width="297" Style="{DynamicResource BlackBGScrollViewer}">
+            <Grid x:Name="ChangelogsGrid" VerticalAlignment="Top"/>
+        </ScrollViewer>
+        <Button x:Name="PlayButton" Content="" HorizontalAlignment="Left" Margin="27,477,0,0" VerticalAlignment="Top" Width="272" Height="56" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStylePlay}" Click="PlayButton_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="Resources/play_button_a.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="UpdateButton" Content="" HorizontalAlignment="Left" Margin="27,477,0,0" VerticalAlignment="Top" Width="272" Height="56" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyleUpdate}" Click="UpdateButton_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="Resources/update_button_a.png"/>
+            </Button.Background>
+        </Button>
+        <CheckBox x:Name="ChkHDGraphics" Content="" HorizontalAlignment="Left" Margin="27,437,0,0" VerticalAlignment="Top" Style="{DynamicResource CustomCheckBox}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="ChkHDGraphics_Click"/>
+        <Label Content="HD Graphics" HorizontalAlignment="Left" Margin="57,436,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" Foreground="#FF5FD25F"/>
+        <Grid x:Name="ProgressGrid" HorizontalAlignment="Left" Height="49" Margin="10,538,0,0" VerticalAlignment="Top" Width="310" Visibility="Hidden">
+            <ProgressBar x:Name="pbar" HorizontalAlignment="Left" Height="8" Margin="20,12,0,0" VerticalAlignment="Top" Width="194" BorderBrush="{x:Null}">
+                <ProgressBar.Foreground>
+                    <ImageBrush ImageSource="Resources/progressbar_fill.png"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <ImageBrush Stretch="None" ImageSource="Resources/progressbar_bg.png"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <Image x:Name="SizeIcon" HorizontalAlignment="Left" Height="15" Margin="21,26,0,0" VerticalAlignment="Top" Width="14" Source="Resources/size_icon.png" Stretch="None"/>
+            <RichTextBox x:Name="RtbProgress" HorizontalAlignment="Left" Margin="40,28,0,0" VerticalAlignment="Top" Width="248" BorderBrush="{x:Null}" Foreground="#FF676D75" FontFamily="Arial" FontSize="10" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsReadOnly="True" Style="{DynamicResource RtbProgress}">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run x:Name="_CurrentFileName" Text="patch-x.MPQ" Foreground="#FFC57474"/>
+                        <Run Text="("/>
+                        <Run x:Name="_FirstIndex" Text="1" Foreground="#FF8CA23F"/>
+                        <Run Text="/"/>
+                        <Run x:Name="_SecondIndex" Text="4" Foreground="#FF8CA23F"/>
+                        <Run Text=") @"/>
+                        <Run x:Name="_DownloadSpeed" Text="15 MB/s" Foreground="#FF39ACD6"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Label x:Name="DownloadStatus" Content="?%" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="10" FontWeight="Bold" Foreground="#FF676D75" VerticalContentAlignment="Center" Padding="0" Width="69" HorizontalContentAlignment="Right"/>
+        </Grid>
+        <Grid x:Name="UpdatingPlaceholder" HorizontalAlignment="Left" Height="56" Margin="27,477,0,0" VerticalAlignment="Top" Width="272">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF32251C" Offset="0"/>
+                    <GradientStop Color="#FF33251D" Offset="1"/>
+                    <GradientStop Color="#FF382920" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label x:Name="LabelPlaceholder" Content="PLEASE WAIT" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="14" FontWeight="Bold" Foreground="#FF8F7B57"/>
+        </Grid>
+    </Grid>
+</Window>

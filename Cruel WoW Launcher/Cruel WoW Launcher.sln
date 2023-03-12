@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cruel WoW Launcher", "Cruel WoW Launcher.csproj", "{DA8415CE-55BE-4709-8B02-ABC2F8088174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA8415CE-55BE-4709-8B02-ABC2F8088174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8415CE-55BE-4709-8B02-ABC2F8088174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8415CE-55BE-4709-8B02-ABC2F8088174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8415CE-55BE-4709-8B02-ABC2F8088174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A0D8C1A-E573-489E-BE3A-100D8FFF0E40}
+	EndGlobalSection
+EndGlobal
